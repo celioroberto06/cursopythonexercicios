@@ -10,4 +10,3 @@ print(f'O dobro de {p} é {moedas.dobro(p)}')
 sleep(1)
 print(f'Aumentando 10 % de {p} é {moedas.aumentar(p, 10)}')
 
-

@@ -1,3 +1,4 @@
+from exercicio115.lib.interface import *
 def arquivoExiste(nome):
     try:
         a = open(nome, 'rt')
@@ -13,6 +14,35 @@ def criarArquivo(nome):
         a = open(nome, 'wt+')
         a.close()
     except:
-        print('Houve um ERROna criação do arquivo!')
+        print('Houve um ERRO na criação do arquivo!')
     else:
         print(f'Arquivo {nome} criado com sucesso!')
+
+
+def lerArquivo(nome):
+    try:
+        a = open(nome, 'rt')
+    except:
+        print('Erro ao ler o arquivo!')
+    else:
+        cabeçalho('PESSOAS CADASTRADAS')
+        for linha in a:
+            dado = linha.split(';')
+            dado[1] = dado[1].replace('\n', '')
+            print(f'{dado[0]:<30}{dado[1]:>3} anos')
+    finally:
+        a.close()
+
+def cadastrar(arq, nome='desconhecido', idade=0):
+    try:
+        a = open(arq, 'at')
+    except:
+        print('Houve um ERRO na ABERTURA do ARQUIVO!')
+    else:
+        try:
+            a.write(f'{nome};{idade}\n')
+        except:
+            print(f'Ouve um erro {TypeError.__class__}')
+        else:
+            print(f'Novo registro {nome} adicionado.')
+            a.close()

@@ -33,6 +33,12 @@ def menu(lista):
     return opc
 
 
+def opção1(txt):
+    list = []
+
+def opção2(nome, idade):
+    n1 = str(input('Nome: '))
+    n2 = int(input('Idade: '))
 
 
 

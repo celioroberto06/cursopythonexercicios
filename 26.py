@@ -1,5 +1,4 @@
 frase = str(input('Digite uma frase: ')).upper().strip()
-quantidade = len(frase)
 letra = frase.count('A')
 apareceu = frase.find('A') + 1
 ultima = frase.rfind('A') + 1

@@ -5,7 +5,7 @@ def contador(i, f, p):
         p *= -1
     if p == 0:
         p = 1
-    print('~' * 20)
+    print('-=' * 35)
     print(f'Contagem de {i} até {f} de {p} em {p}')
     sleep(2)
     if i < f:
@@ -25,7 +25,7 @@ def contador(i, f, p):
 #programa principal
 contador(1, 10, 0)
 contador(10, 0, 2)
-print('~' * 20)
+print('-=' * 35)
 print('Agora é a sua vez de personalizar a contagem!')
 ini = int(input('Início: '))
 fim = int(input('Fim:    '))

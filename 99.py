@@ -4,7 +4,6 @@ from time import sleep
 def maior (* núm):
     cont = maior = 0
     print('Analizando os valores passados...')
-    print('-=' * 23)
     for valor in núm:
         print(f'{valor} ', end='', flush=True)
         sleep(0.3)
@@ -17,7 +16,8 @@ def maior (* núm):
 
 
     print(f'Foram informados {cont} valores ao todo.')
-    print(f'O maior valor informado fou {maior}.')
+    print(f'O maior valor informado foi {maior}.')
+    print('-=' * 23)
 #programa príncipal
 maior(2, 9, 4, 5, 7, 1)
 maior(2, 5, 8,10)

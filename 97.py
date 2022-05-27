@@ -1,12 +1,12 @@
 while True:
     def escreva(msg):
-        tam = len(msg)
-        print('-=' * tam)
+        tam = len(msg)+4
+        print('=' * tam)
         print(f'  {msg}')
-        print('-=' * tam)
+        print('=' * tam)
     msg = str(input('Digite um nome: '))
     escreva(f'{msg}')
-    perg = 'Nn'
+    perg = ''
     perg = str(input('Quer continuar [S / N]')).strip().upper()[0]
     if perg == 'N':
         break
